@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>Restaurant Management System</display-name>
+
+    <!-- ================= CUSTOMER SERVLETS ================= -->
+
+    <servlet>
+        <servlet-name>CustomerAuthServlet</servlet-name>
+        <servlet-class>com.rms.servlet.CustomerAuthServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CustomerAuthServlet</servlet-name>
+        <url-pattern>/customer/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.rms.servlet.CartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/customer/cart</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+    	<servlet-name>CustomerMenuServlet</servlet-name>
+    	<servlet-class>com.rms.servlet.CustomerMenuServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>CustomerMenuServlet</servlet-name>
+    	<url-pattern>/customer/menu</url-pattern>
+	</servlet-mapping>
+	
+
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.rms.servlet.OrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/customer/order</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>CustomerOrdersServlet</servlet-name>
+    	<servlet-class>com.rms.servlet.CustomerOrdersServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>CustomerOrdersServlet</servlet-name>
+    	<url-pattern>/customer/orders</url-pattern>
+	</servlet-mapping>
+    
+
+    <servlet>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>com.rms.servlet.PaymentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/customer/payment</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================= ADMIN SERVLETS ================= -->
+
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.rms.servlet.AdminLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/admin/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DishManagementServlet</servlet-name>
+        <servlet-class>com.rms.servlet.DishManagementServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DishManagementServlet</servlet-name>
+        <url-pattern>/admin/dishes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderApprovalServlet</servlet-name>
+        <servlet-class>com.rms.servlet.OrderApprovalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderApprovalServlet</servlet-name>
+        <url-pattern>/admin/orders</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeliveryAssignServlet</servlet-name>
+        <servlet-class>com.rms.servlet.DeliveryAssignServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeliveryAssignServlet</servlet-name>
+        <url-pattern>/admin/assign-delivery</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>DeliveryManManagementServlet</servlet-name>
+    	<servlet-class>com.rms.servlet.DeliveryManManagementServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>DeliveryManManagementServlet</servlet-name>
+    	<url-pattern>/admin/manage-delivery</url-pattern>
+	</servlet-mapping>
+    
+
+    <!-- ================= DELIVERY MAN SERVLETS ================= -->
+
+    <servlet>
+        <servlet-name>DeliveryLoginServlet</servlet-name>
+        <servlet-class>com.rms.servlet.DeliveryLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeliveryLoginServlet</servlet-name>
+        <url-pattern>/delivery/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeliveryStatusServlet</servlet-name>
+        <servlet-class>com.rms.servlet.DeliveryStatusServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeliveryStatusServlet</servlet-name>
+        <url-pattern>/delivery/status</url-pattern>
+    </servlet-mapping>
+
+	<!-- ================= Log out ================= -->
+
+	<servlet>
+    	<servlet-name>LogoutServlet</servlet-name>
+    	<servlet-class>com.rms.servlet.LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    	<servlet-name>LogoutServlet</servlet-name>
+    	<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+    <!-- ================= WELCOME FILE ================= -->
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
